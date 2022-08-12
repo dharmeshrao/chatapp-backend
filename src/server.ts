@@ -1,6 +1,8 @@
 import { dbConnection } from './configs/db';
 import app from './index';
 
-app.listen(process.env.PORT, async () => {
+const port = process.env.PORT || 4000;
+
+app.listen(port, async () => {
   await dbConnection();
 });
