@@ -18,6 +18,8 @@ class userRepository {
     const isUserExist = await UserModal.findOne({ phone });
     if (isUserExist) {
       // send OTP and Direct Login
+    } else {
+      // send otp and ask for details
     }
     return response.cookie(cookieNames.MOBILE_INTO_COOKIES, phone, {
       httpOnly: true,
