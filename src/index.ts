@@ -1,5 +1,7 @@
-const express = require('express')();
+import express, { Application } from 'express';
+import dotenv from 'dotenv';
+dotenv.config();
+const app: Application = express();
+app.use(express.json());
 
-express.listen(4000, () => {
-  console.log('listing on port here what do you know about oit');
-});
+export default app;
